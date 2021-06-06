@@ -9,11 +9,13 @@ function ChampionsSearcher(props) {
     <div className="champions-searcher">
       <ChampionsFilters />
       <ChampionsSearchInput />
-      <ChampionsList />
+      <ChampionsList champions={props.champions} />
     </div>
   );
 };
 
-ChampionsSearcher.propTypes = {};
+ChampionsSearcher.propTypes = {
+  champions: PropTypes.object
+};
 
 export default ChampionsSearcher;

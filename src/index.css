@@ -15,9 +15,18 @@ Styles
 ========================================================================== 
 */
 
+.champions-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .champions-list-item {
+  padding: 15px;
   cursor: pointer;
 }
+
+.champions-list-item
 
 /* 
 ==========================================================================
