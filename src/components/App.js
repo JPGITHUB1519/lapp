@@ -1,6 +1,16 @@
+import ChampionsInfo from './ChampionsInfo';
+import ChampionsList from './ChampionsList';
+import ChampionListItem from './ChampionListItem';
+import ChampionsSearchInput from './ChampionsSearchInput';
+import ChampionsFilters from './ChampionsFilters';
+
 function App(props) {
   return (
-    <h1>Hello World!</h1>
+    <div>
+      {/* <h1>Lapp</h1> */}
+      <ChampionsInfo />
+      
+    </div>
   );
 }
 

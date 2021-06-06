@@ -30,11 +30,19 @@ Sections:
 
 Components:
 
-  ChampionSearcher
-    - ChampionList
-      - ChampionListItem  
-        <img>
-        <label>
+  - ChampionsInfo
+    - ChampionSearcher
+      - ChampionsList
+        - ChampionsListItem  
+          ChampionAvatar
+
+          <label>
   
-  ChampionFilters
+
+  - ChampionsSearchForm
+
+  - ChampionFilters
     ChampionFilter
+
+  ChampionAvatar
+    img
