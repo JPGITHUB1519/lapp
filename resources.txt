@@ -1,0 +1,28 @@
+Resources
+  Documentation: 
+    https://developer.riotgames.com/docs/lol
+
+  Apis Doc:
+    https://developer.riotgames.com/apis
+    
+  Datadragon CDN:
+    http://ddragon.leagueoflegends.com/cdn
+  
+  Community Dragon (Augment datadragon data view datadragon files online):
+    https://raw.communitydragon.org/
+
+  Datadragon Libraries:
+    https://riot-api-libraries.readthedocs.io/en/latest/libraries.html
+
+Notes:
+  We can host datadragon locally or use the CDN (better approach and allows us to get the latest info)
+  We can send Version and Language to the datadragon CDN
+
+Concepts:
+  Datadragon -> static data -> data files and game assets
+  Datadragon CDN
+  Configure DataDragon to only get the lastest result
+
+
+Data Dragon Explanation:
+  https://github.com/SubprimeLender/best_marksmen/issues/1

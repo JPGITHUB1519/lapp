@@ -12,6 +12,7 @@
 /build
 
 # misc
+/dragontail-11.11.1
 .DS_Store
 .env.local
 .env.development.local

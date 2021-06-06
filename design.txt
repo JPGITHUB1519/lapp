@@ -1,0 +1,40 @@
+Lapp Versions:
+
+  V1:
+    - Champions info page clone 
+    - Runes, Objects, Build -> Link to OP.GG, U.gg and Probuilds for now
+    - For the Vi I only need the DataDragon (static data)
+    - UI Style will Match Lol Client -> https://runeforge.gg/
+    - Multiple Languages Constant, Select Your Language?
+  
+  V1.1
+    - Add Champions Counter to the Champion info individual page
+
+  other Versions:
+    - News
+    - RuneForge Style Clone
+    - U.gg, Op.gg Clones (will think on design later)
+    - Lol Name Availability Checker
+    - Lol Mastery
+
+
+Sections:
+
+  - Champions Info (similar to https://universe.leagueoflegends.com/en_US/champions/, https://na.leagueoflegends.com/en-us/champions/)
+    - Page with All the Champions
+      * Search Champions
+      * Sort By: A - Z, Newest, Region
+  
+  - Champion Info Specific Page (similar to https://na.leagueoflegends.com/en-us/champions/teemo/)
+
+
+Components:
+
+  ChampionSearcher
+    - ChampionList
+      - ChampionListItem  
+        <img>
+        <label>
+  
+  ChampionFilters
+    ChampionFilter
