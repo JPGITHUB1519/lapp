@@ -51,10 +51,13 @@ Components:
 Backlog:
 
   To do:
-    - champions filtering by Search
     - champions filters 
     - create a wrapper function to generate datadragon cdn
     - loading spinner
+
+  Doing:
+    - champions filtering by Search
+
 
   Done:
     - show correct image for each champions

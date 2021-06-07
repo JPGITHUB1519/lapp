@@ -10,6 +10,7 @@ function ChampionsList(props) {
         const champion = props.champions[key];
 
         return <ChampionListItem 
+                key={champion.key}
                 championName={champion.name}
                 championImage={`${DATADRAGON_IMAGES_URL}\\${champion.image.group}\\${champion.image.full}`} 
               />;
