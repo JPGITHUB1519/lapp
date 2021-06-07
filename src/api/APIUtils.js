@@ -5,6 +5,7 @@ const LANGUAGE = 'en_US';
 const DATADRAGON_CDN_URL = 'https://ddragon.leagueoflegends.com/cdn';
 const DATADRAGON_API_URL = 'https://ddragon.leagueoflegends.com/api';
 const DATADRAGON_DATA_FILES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERSION}/data/${LANGUAGE}`;
+export const DATADRAGON_IMAGES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERSION}\\img`; 
 
 export const getAvailableLanguages = async () => {
   const result = await axios(`${DATADRAGON_CDN_URL}/languages.json`);

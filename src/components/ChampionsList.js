@@ -1,36 +1,19 @@
 import PropTypes from 'prop-types';
 import ChampionListItem from './ChampionListItem';
+import { DATADRAGON_IMAGES_URL } from '../api/APIUtils';
 
 function ChampionsList(props) {
 
   return (
     <div className="champions-list">
       {Object.keys(props.champions).map(key => {
+        const champion = props.champions[key];
+
         return <ChampionListItem 
-                championName={props.champions[key].name}
-                championImage={'http://ddragon.leagueoflegends.com/cdn/11.11.1/img/champion/Vladimir.png'} 
+                championName={champion.name}
+                championImage={`${DATADRAGON_IMAGES_URL}\\${champion.image.group}\\${champion.image.full}`} 
               />;
       })}
-      {/* <ChampionListItem 
-        championName="Aatrox" 
-        championImage="http://ddragon.leagueoflegends.com/cdn/11.11.1/img/champion/Aatrox.png"
-      />
-      <ChampionListItem 
-        championName="Vladimir" 
-        championImage="http://ddragon.leagueoflegends.com/cdn/11.11.1/img/champion/Vladimir.png" 
-      />
-      <ChampionListItem 
-        championName="Miss Fortune" 
-        championImage="http://ddragon.leagueoflegends.com/cdn/11.11.1/img/champion/MissFortune.png" 
-      />
-      <ChampionListItem 
-        championName="Kayn" 
-        championImage="http://ddragon.leagueoflegends.com/cdn/11.11.1/img/champion/Kayn.png" 
-      />
-      <ChampionListItem 
-        championName="Viego" 
-        championImage="http://ddragon.leagueoflegends.com/cdn/11.11.1/img/champion/Viego.png" 
-      /> */}
     </div>
   );
 }

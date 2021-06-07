@@ -51,13 +51,13 @@ Components:
 Backlog:
 
   To do:
-    - show correct image for each champions
     - champions filtering by Search
     - champions filters 
     - create a wrapper function to generate datadragon cdn
+    - loading spinner
 
   Done:
-
+    - show correct image for each champions
     - Reading and Understanding LOL API and DataDragon
     - Seting up Project, initial files and files structure
     - Start Working on V1, Static Components 
