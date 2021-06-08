@@ -8,7 +8,7 @@ function ChampionsSearchForm(props) {
   }
 
   return (
-    <form>
+    <form style={{display: 'flex', justifyContent: 'center'}}>
       <input 
         value={props.value}
         placeholder="Search for a champion..."

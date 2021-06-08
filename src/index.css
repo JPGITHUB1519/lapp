@@ -26,7 +26,19 @@ Styles
   cursor: pointer;
 }
 
-.champions-list-item
+.champions-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tag-filter-button {
+  cursor: pointer;
+}
+
+.tag-filter-button--selected {
+  background-color: red;
+}
 
 /* 
 ==========================================================================

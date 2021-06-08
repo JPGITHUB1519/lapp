@@ -4,15 +4,21 @@ import ChampionFilter from './ChampionFilter';
 function ChampionsFilters(props) {
   return (
     <div className="champions-filter">
-      <ChampionFilter filterName="Top" />
-      <ChampionFilter filterName="Jungle" />
-      <ChampionFilter filterName="Mid" />
-      <ChampionFilter filterName="Bottom" />
-      <ChampionFilter filterName="Support" />
+      {props.filters.map(filter => {
+        return <ChampionFilter 
+                filterName={filter} 
+                onClick={props.onFilterClick} 
+                selected={filter === props.selectedTagFilter}
+              />
+      })}
     </div>
   );
 }
 
-ChampionsFilters.propTypes = {};
+ChampionsFilters.propTypes = {
+  filters: PropTypes.array,
+  selectedTagFilter: PropTypes.string,
+  onFilterClick: PropTypes.func
+};
 
 export default ChampionsFilters;

@@ -51,15 +51,22 @@ Components:
 Backlog:
 
   To do:
-    - champions filters 
+    - Move state logic from championsInfo to championsSearch?
+    - Add No champions match the filter criteria or not champions found to searcher
     - create a wrapper function to generate datadragon cdn
     - loading spinner
+    - when the name is too long (for example Nunu and Willump) only 2 columns is shown on mobile
 
   Doing:
-    - champions filtering by Search
+    - champions filters by tag. Remember if search !== empty filter also by tag
 
 
   Done:
+    - champions filtering by Search
+      Why it is slow ?
+        It is only slow because the bandwidth that takes to load all the images from the server
+        (it is not slow because react). If we remove the image or enable cache on chrome it will be fast af again.
+
     - show correct image for each champions
     - Reading and Understanding LOL API and DataDragon
     - Seting up Project, initial files and files structure
@@ -67,3 +74,7 @@ Backlog:
     - Add helpers API data fetchers
     - Add initial State and Data fetching
     - Show Champions List 
+  
+  Limits:
+    Champions By role (top, mid, jungle, bottom, support)
+      the api does not give this data and it's hard to maintain that for them between patch
