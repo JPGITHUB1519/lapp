@@ -58,10 +58,10 @@ Backlog:
     - when the name is too long (for example Nunu and Willump) only 2 columns is shown on mobile
 
   Doing:
-    - champions filters by tag. Remember if search !== empty filter also by tag
-
+    - Centering content on Desktop and adding a max-width of 960px
 
   Done:
+    - champions filters by tag. Remember if search !== empty filter also by tag
     - champions filtering by Search
       Why it is slow ?
         It is only slow because the bandwidth that takes to load all the images from the server

@@ -70,7 +70,7 @@ function ChampionsInfo(props) {
   }
 
   return (
-    <div>
+    <div className="champions-info">
       {isLoading 
         ? <div>Loading...</div>
         : <ChampionsSearcher 

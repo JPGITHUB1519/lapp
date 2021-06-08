@@ -15,6 +15,7 @@ Styles
 ========================================================================== 
 */
 
+
 .champions-list {
   display: flex;
   justify-content: center;
@@ -53,7 +54,10 @@ Responsive Media Queries
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+  .champions-info {
+    width: 960px;
+    margin: 0 auto;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
