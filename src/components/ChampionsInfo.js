@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import Cliploader from "react-spinners/ClipLoader";
 import * as Config from '../config';
 import * as Utils from '../Utils';
 import * as APIUtils from '../api/APIUtils';
@@ -63,8 +64,6 @@ function ChampionsInfo(props) {
     // after filtering by name, filter by tag
     filteredData = Utils.filterChampionsByTag(filteredData, tagFilter);
     
-    console.log(filteredData);
-
     // setting filtered data
     setFilteredChampions(filteredData);
   }
@@ -72,7 +71,9 @@ function ChampionsInfo(props) {
   return (
     <div className="champions-info">
       {isLoading 
-        ? <div>Loading...</div>
+        ? <div className="full-screen-loader-container">
+            <Cliploader loading={isLoading} size={200} color="#C2902D" />
+          </div>
         : <ChampionsSearcher 
             champions={filteredChampions} 
             searchInputValue={searchFilter}

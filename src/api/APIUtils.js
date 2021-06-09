@@ -1,4 +1,5 @@
 import axios from 'axios';
+import * as Utils from '../Utils';
 
 const LOL_VERSION = '11.11.1';
 const LANGUAGE = 'en_US';

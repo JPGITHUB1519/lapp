@@ -26,3 +26,9 @@ export const filterChampionsByTag = (champions, tag) => {
 
   return filteredData;
 };
+
+
+// sleep utility function, you can await it!
+export const sleep = (ms) => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}

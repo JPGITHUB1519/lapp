@@ -47,6 +47,9 @@ Components:
   ChampionAvatar
     img
 
+Color: 
+  rgb(194, 144, 45);
+  #c2902d
 
 Backlog:
 
@@ -60,6 +63,7 @@ Backlog:
   Doing:
 
   Done:
+    - Adding Some basic styling with CSS
     - Centering content on Desktop and adding a max-width of 960px
     - champions filters by tag. Remember if search !== empty filter also by tag
     - champions filtering by Search
@@ -78,3 +82,5 @@ Backlog:
   Limits:
     Champions By role (top, mid, jungle, bottom, support)
       the api does not give this data and it's hard to maintain that for them between patch
+
+
