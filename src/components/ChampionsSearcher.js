@@ -14,7 +14,12 @@ function ChampionsSearcher(props)
         onFilterClick={props.onFilterClick} 
       />
       <ChampionsSearchForm value={props.searchValue} onInputChange={props.onSearchInputChange} />
-      <ChampionsList champions={props.champions} />
+      {Object.keys(props.champions).length > 0 
+        ? <ChampionsList champions={props.champions} />
+        : <div className="no-champions-notification-container">
+            <p>No champions match the filter criteria.</p>
+          </div>
+      } 
     </div>
   );
 };

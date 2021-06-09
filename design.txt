@@ -55,14 +55,14 @@ Backlog:
 
   To do:
     - Move state logic from championsInfo to championsSearch?
-    - Add No champions match the filter criteria or not champions found to searcher
     - create a wrapper function to generate datadragon cdn
-    - loading spinner
     - when the name is too long (for example Nunu and Willump) only 2 columns is shown on mobile
 
   Doing:
 
   Done:
+    - Add No champions match the filter criteria or not champions found to searcher
+    - loading spinner
     - Adding Some basic styling with CSS
     - Centering content on Desktop and adding a max-width of 960px
     - champions filters by tag. Remember if search !== empty filter also by tag
