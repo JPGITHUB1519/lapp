@@ -8,8 +8,9 @@ function ChampionsSearchForm(props) {
   }
 
   return (
-    <form style={{display: 'flex', justifyContent: 'center'}}>
+    <form className="champion-search-form">
       <input 
+        className="champion-search-form__input"
         value={props.value}
         placeholder="Search for a champion..."
         onChange={handleInputChange}

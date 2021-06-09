@@ -16,15 +16,21 @@ Styles
 */
 
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .champions-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .champions-list-item {
   padding: 15px;
   cursor: pointer;
+  text-align: center;
 }
 
 .champions-filter {
@@ -35,10 +41,37 @@ Styles
 
 .tag-filter-button {
   cursor: pointer;
+  color: #909090;
+  border: none;
+  background: none;
+  padding: 10px 10px;
+}
+
+.tag-filter-button:hover {
+  color: #000;
 }
 
 .tag-filter-button--selected {
-  background-color: red;
+  color: #000;
+  font-weight: 700;
+  border-bottom: 2px solid rgb(194, 144, 45);
+}
+
+.champion-search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.champion-search-form__input {
+  background-image: url('assets/img/icon-search.svg');
+  background-repeat: no-repeat;
+  background-position: center left 7px;
+  height: 35px;
+  width: 250px;
+  border: 1px solid rgb(194, 144, 45);
+  padding-left: 35px;
+  outline-color: rgb(194, 144, 45);
 }
 
 /* 
