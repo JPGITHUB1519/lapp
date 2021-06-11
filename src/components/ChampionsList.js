@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import ChampionListItem from './ChampionListItem';
-import { DATADRAGON_IMAGES_URL } from '../api/APIUtils';
 
 function ChampionsList(props) {
 
@@ -11,8 +10,7 @@ function ChampionsList(props) {
 
         return <ChampionListItem 
                 key={champion.key}
-                championName={champion.name}
-                championImage={`${DATADRAGON_IMAGES_URL}\\${champion.image.group}\\${champion.image.full}`} 
+                champion={champion}
               />;
       })}
     </div>

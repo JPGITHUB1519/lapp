@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 
 function ChampionAvatar(props) {
   return (
-    <img src={props.championImage} alt={props.championName} width={props.width} height={props.height} />
+    <img src={props.image} alt={props.alt} width={props.width} height={props.height} />
   );
 }
 
 ChampionAvatar.propTypes = {
-  championImage: PropTypes.string,
-  championName: PropTypes.string,
+  image: PropTypes.string,
+  alt: PropTypes.string,
   width: PropTypes.number,
   height: PropTypes.number
 };

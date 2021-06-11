@@ -64,10 +64,10 @@ Backlog:
     - when the name is too long (for example Nunu and Willump) only 2 columns is shown on mobile
 
   Doing:
-    - Rename ChampionsInfo Component to ChampionsPage. 
-    - Add basic ChampionsInfo Component and basic routing
+    - Add basic ChampionInfo Component and basic routing and links
 
   Done:
+    - Rename ChampionsInfo Component to ChampionsPage. 
     - Add React Routing and basic route for the project
     - Add No champions match the filter criteria or not champions found to searcher
     - loading spinner

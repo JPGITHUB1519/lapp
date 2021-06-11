@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { Switch, Route, Link, useRouteMatch } from 'react-router';
 import Cliploader from "react-spinners/ClipLoader";
 import * as Config from '../config';
 import * as Utils from '../Utils';
@@ -14,7 +15,9 @@ function ChampionsPage(props) {
   const [tagFilter, setTagFilter] = useState('All');
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  
+
+  let match = useRouteMatch();
+
   useEffect(() => {
     const fetchData = async () => {
       setIsError(false);
@@ -69,7 +72,7 @@ function ChampionsPage(props) {
   }
 
   return (
-    <div className="champions-info">
+    <div className="champions-page">
       {isLoading 
         ? <div className="full-screen-loader-container">
             <Cliploader loading={isLoading} size={200} color="#C2902D" />
