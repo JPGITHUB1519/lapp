@@ -15,7 +15,7 @@ import ChampionsFilters from './ChampionsFilters';
 
 function App(props) {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <nav>
           <ul>
