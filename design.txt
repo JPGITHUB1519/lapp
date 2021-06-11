@@ -47,6 +47,11 @@ Components:
   ChampionAvatar
     img
 
+Routes:
+  /
+  /champions
+  /champions/:championName
+
 Color: 
   rgb(194, 144, 45);
   #c2902d
@@ -59,6 +64,7 @@ Backlog:
     - when the name is too long (for example Nunu and Willump) only 2 columns is shown on mobile
 
   Doing:
+    Add React Routing and Routes for the project
 
   Done:
     - Add No champions match the filter criteria or not champions found to searcher
