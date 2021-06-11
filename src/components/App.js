@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Home from './Home';
-import ChampionsInfo from './ChampionsInfo';
+import ChampionsPage from './ChampionsPage';
 import ChampionsList from './ChampionsList';
 import ChampionListItem from './ChampionListItem';
 import ChampionsFilters from './ChampionsFilters';
@@ -29,7 +29,7 @@ function App(props) {
 
         <Switch>
           <Route path="/champions">
-            <ChampionsInfo />
+            <ChampionsPage />
           </Route>
           <Route path="/">
             <Home />
@@ -37,11 +37,6 @@ function App(props) {
         </Switch>
       </div>
     </Router>
-    // <div>
-    //   {/* <h1>Lapp</h1> */}
-    //   <ChampionsInfo />
-      
-    // </div>
   );
 }
 

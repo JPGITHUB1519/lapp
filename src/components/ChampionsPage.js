@@ -7,7 +7,7 @@ import * as Utils from '../Utils';
 import * as APIUtils from '../api/APIUtils';
 import ChampionsSearcher from './ChampionsSearcher';
 
-function ChampionsInfo(props) {
+function ChampionsPage(props) {
   const [champions, setChampions] = useState([]);
   const [filteredChampions, setFilteredChampions] = useState([]);
   const [searchFilter, setSearchFilter] = useState('');
@@ -87,6 +87,6 @@ function ChampionsInfo(props) {
   );
 }
 
-ChampionsInfo.propTypes = {};
+ChampionsPage.propTypes = {};
 
-export default ChampionsInfo;
+export default ChampionsPage;
