@@ -22,6 +22,7 @@ function ChampionsPage(props) {
     const fetchData = async () => {
       setIsError(false);
       setIsLoading(true);
+
       try {
         const data = await APIUtils.getAllChampions();
         setChampions(data);
@@ -30,7 +31,7 @@ function ChampionsPage(props) {
         setIsError(true);
       }
       setIsLoading(false);
-    }
+    };
 
     fetchData();
   }, []);
@@ -85,7 +86,7 @@ function ChampionsPage(props) {
             onFilterClick={handleFilterClick}
           />
       }
-      {isError && <div>Something went wrong 😥</div>}
+      {isError && <p>Something went wrong 😥</p>}
     </div>
   );
 }

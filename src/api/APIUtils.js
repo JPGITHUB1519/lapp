@@ -6,7 +6,10 @@ const LANGUAGE = 'en_US';
 const DATADRAGON_CDN_URL = 'https://ddragon.leagueoflegends.com/cdn';
 const DATADRAGON_API_URL = 'https://ddragon.leagueoflegends.com/api';
 const DATADRAGON_DATA_FILES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERSION}/data/${LANGUAGE}`;
-export const DATADRAGON_IMAGES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERSION}\\img`; 
+export const DATADRAGON_VERSIONED_IMAGES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERSION}\\img`;
+// not versioned images
+export const DATADRAGON_IMAGES_URL = `${DATADRAGON_CDN_URL}/img`; 
+
 
 export const getAvailableLanguages = async () => {
   const result = await axios(`${DATADRAGON_CDN_URL}/languages.json`);
@@ -37,4 +40,15 @@ export const getAllChampions = async () => {
   const championsData = result.data.data;
 
   return championsData;
+};
+
+// get champion indiviaual data by ID
+export const getChampionById = async (championID) => {
+  const result = await axios(
+    `${DATADRAGON_DATA_FILES_URL}/champion/${championID}.json`
+  );
+  
+  const data = result.data.data;
+
+  return data;
 };

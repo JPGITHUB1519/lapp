@@ -29,7 +29,8 @@ function App(props) {
         </nav>
 
         <Switch>
-          <Route path="/champions/:champion">
+          {/* the child component will be rendered when the path is matched */}
+          <Route path="/champions/:championID">
             <ChampionInfo />
           </Route>
           <Route path="/champions">

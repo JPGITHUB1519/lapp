@@ -59,13 +59,18 @@ Color:
 Backlog:
 
   To do:
+    - Create global component for full screen loader
+    - Create global component for something went global
+    - Create global hooks for api calls status? data, isError, isLoading etc... ?
     - Move state logic from championsInfo to championsSearch?
     - create a wrapper function to generate datadragon cdn
     - when the name is too long (for example Nunu and Willump) only 2 columns is shown on mobile
 
   Doing:
+    - Create Basic champion page and get data from API
 
   Done:
+    - Fix for using react router on github pages (but sill does not work on reload)
     - Add basic ChampionInfo Component and basic routing and links
     - Rename ChampionsInfo Component to ChampionsPage. 
     - Add React Routing and basic route for the project
