@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function ChampionAvatar(props) {
   return (
-    <img src={props.image} alt={props.alt} width={props.width} height={props.height} />
+    <img className='responsive-image' src={props.image} alt={props.alt} width={props.width} height={props.height} />
   );
 }
 

@@ -71,6 +71,8 @@ Backlog:
   Doing:
 
   Done:
+    - Making Avatar responsive
+    - Implement champions builds links component
     - Create Basic champion page and get data from API
     - Fix for using react router on github pages (but sill does not work on reload)
     - Add basic ChampionInfo Component and basic routing and links

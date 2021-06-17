@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Cliploader from "react-spinners/ClipLoader";
 import * as APIUtils from '../api/APIUtils';
 import ChampionAvatar from './ChampionAvatar';
+import ChampionBuildLinks from './ChampionBuildLinks';
 import { DATADRAGON_VERSIONED_IMAGES_URL, DATADRAGON_IMAGES_URL } from '../api/APIUtils';
 
 function ChampionInfo(props) {
@@ -38,11 +40,13 @@ function ChampionInfo(props) {
             <Cliploader loading={isLoading} size={200} color="#C2902D" />
           </div>
         : Object.keys(championData).length > 0 && 
-          <div>
+          <>
             <ChampionAvatar 
               image={`${DATADRAGON_IMAGES_URL}\\${championData.image.group}\\splash\\${championData.id}_0.jpg`}
               alt={championData.name}
             />
+            <ChampionBuildLinks championID={championData.id} />
+
             <p>Name: {championData.name}</p><br />
             <p>Title: {championData.title} </p><br />
             <p>Lore: {championData.lore} </p><br />
@@ -83,8 +87,8 @@ function ChampionInfo(props) {
                   />
                 </>
               );
-            })}
-          </div>
+            })}            
+          </>
       }
 
       {isError && <p>Something went wrong 😥</p>}

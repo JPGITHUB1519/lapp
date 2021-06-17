@@ -27,8 +27,37 @@ export const filterChampionsByTag = (champions, tag) => {
   return filteredData;
 };
 
-
 // sleep utility function, you can await it!
 export const sleep = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+// champions link builds links generators
+export const generateUggBuildLink = (championID) => {
+  const link = `https://u.gg/lol/champions/${championID}/build`;
+  return link;
+};
+
+export const generateOpggBuildLink = (championID) => {
+  const link = `https://na.op.gg/champion/${championID}/statistics/`;
+  return link;
+};
+
+export const generateProBuildLink = (championID) => {
+  const link = `https://www.probuilds.net/champions/details/${championID}`;
+  return link;
+};
+
+export const generateBlitzggLink = (championID) => {
+  const link = `https://blitz.gg/lol/champions/${championID}`;
+  return link;
+};
+
+export const generateChampionBuildLinks = (championID) => {
+  return {
+    'u.gg' : generateUggBuildLink(championID),
+    'op.gg' : generateOpggBuildLink(championID),
+    'probuilds': generateProBuildLink(championID),
+    'blitz.gg': generateBlitzggLink(championID)
+  };
+};

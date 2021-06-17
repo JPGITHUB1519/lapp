@@ -80,6 +80,20 @@ body {
   margin-top: 20px;
 }
 
+.champion-build-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.champion-build-links__link {
+  text-decoration: none;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
 .full-screen-loader-container {
   display: flex;
   justify-content: center;
@@ -106,7 +120,7 @@ Responsive Media Queries
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .champions-page {
+  .container {
     width: 960px;
     margin: 0 auto;
   }
