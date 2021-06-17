@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/lapp/static/css/main.6823e4b2.chunk.css",
-    "main.js": "/lapp/static/js/main.2a4ca8e3.chunk.js",
-    "main.js.map": "/lapp/static/js/main.2a4ca8e3.chunk.js.map",
+    "main.css": "/lapp/static/css/main.8948f5b1.chunk.css",
+    "main.js": "/lapp/static/js/main.e7070d2a.chunk.js",
+    "main.js.map": "/lapp/static/js/main.e7070d2a.chunk.js.map",
     "runtime-main.js": "/lapp/static/js/runtime-main.1a255537.js",
     "runtime-main.js.map": "/lapp/static/js/runtime-main.1a255537.js.map",
-    "static/js/2.c2d913ec.chunk.js": "/lapp/static/js/2.c2d913ec.chunk.js",
-    "static/js/2.c2d913ec.chunk.js.map": "/lapp/static/js/2.c2d913ec.chunk.js.map",
+    "static/js/2.53c1e5ff.chunk.js": "/lapp/static/js/2.53c1e5ff.chunk.js",
+    "static/js/2.53c1e5ff.chunk.js.map": "/lapp/static/js/2.53c1e5ff.chunk.js.map",
     "static/js/3.dcd7734a.chunk.js": "/lapp/static/js/3.dcd7734a.chunk.js",
     "static/js/3.dcd7734a.chunk.js.map": "/lapp/static/js/3.dcd7734a.chunk.js.map",
     "index.html": "/lapp/index.html",
-    "static/css/main.6823e4b2.chunk.css.map": "/lapp/static/css/main.6823e4b2.chunk.css.map",
-    "static/js/2.c2d913ec.chunk.js.LICENSE.txt": "/lapp/static/js/2.c2d913ec.chunk.js.LICENSE.txt",
+    "static/css/main.8948f5b1.chunk.css.map": "/lapp/static/css/main.8948f5b1.chunk.css.map",
+    "static/js/2.53c1e5ff.chunk.js.LICENSE.txt": "/lapp/static/js/2.53c1e5ff.chunk.js.LICENSE.txt",
     "static/media/index.css": "/lapp/static/media/icon-search.c60ff3e5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1a255537.js",
-    "static/js/2.c2d913ec.chunk.js",
-    "static/css/main.6823e4b2.chunk.css",
-    "static/js/main.2a4ca8e3.chunk.js"
+    "static/js/2.53c1e5ff.chunk.js",
+    "static/css/main.8948f5b1.chunk.css",
+    "static/js/main.e7070d2a.chunk.js"
   ]
 }
