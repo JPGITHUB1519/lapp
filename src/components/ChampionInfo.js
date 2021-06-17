@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Cliploader from "react-spinners/ClipLoader";
 import * as APIUtils from '../api/APIUtils';
 import ChampionAvatar from './ChampionAvatar';
-import { DATADRAGON_IMAGES_URL } from '../api/APIUtils';
+import { DATADRAGON_VERSIONED_IMAGES_URL, DATADRAGON_IMAGES_URL } from '../api/APIUtils';
 
 function ChampionInfo(props) {
   const [championData, setChampionData] = useState([]);
@@ -40,7 +40,7 @@ function ChampionInfo(props) {
         : Object.keys(championData).length > 0 && 
           <div>
             <ChampionAvatar 
-              image={`${DATADRAGON_IMAGES_URL}\\${championData.image && championData.image.group}\\splash\\${championData.id}_0.jpg`}
+              image={`${DATADRAGON_IMAGES_URL}\\${championData.image.group}\\splash\\${championData.id}_0.jpg`}
               alt={championData.name}
             />
             <p>Name: {championData.name}</p><br />
@@ -49,6 +49,41 @@ function ChampionInfo(props) {
             {/* championData is not available on first render so we have to short circuit! */}
             <p>Role: {championData.tags ? championData.tags[0] : ''}</p><br />
             <p>Difficulty: {championData.info ? championData.info.difficulty : ''}</p><br />
+            <h2>Abilities</h2>
+            <ChampionAvatar 
+              image={`${DATADRAGON_VERSIONED_IMAGES_URL}\\${championData.passive.image.group}\\${championData.passive.image.full}`} 
+              alt={championData.passive.name}
+            />
+            <p>Passive - {championData.passive.name}</p>
+            <p>{championData.passive.description}</p>
+            {championData.spells.map(spell => {
+              return (
+                <div>
+                  <ChampionAvatar 
+                    image={`${DATADRAGON_VERSIONED_IMAGES_URL}\\${spell.image.group}\\${spell.image.full}`} 
+                    alt={spell.name}
+                  />
+                  <b>{spell.name}</b>
+                  <p>{spell.description}</p>
+                  <br></br>
+                </div>
+              );
+            })}
+            <br></br>
+            <h2>Skins:</h2>
+            {championData.skins.map(skin => {
+              return (
+                <>
+                  <p>{skin.name}</p>
+                  <ChampionAvatar 
+                    image={`${DATADRAGON_IMAGES_URL}\\${championData.image.group}\\splash\\${championData.id}_${skin.num}.jpg`} 
+                    alt={skin.name}
+                    width={500}
+                    height={300}
+                  />
+                </>
+              );
+            })}
           </div>
       }
 
