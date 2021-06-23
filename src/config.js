@@ -6,3 +6,7 @@ export const championsTags = [
   'Support',
   'Tank'
 ];
+
+export const championsAbilitiesKeys = [
+  'Q', 'W', 'E', 'R'
+];

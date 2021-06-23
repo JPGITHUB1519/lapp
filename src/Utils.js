@@ -1,3 +1,7 @@
+import { championsAbilitiesKeys } from './config';
+import { getChampionAbilityVideoURL } from './api/APIUtils';
+
+
 export const filterObjectByKey = (object, filterKey) => {
   const filteredObject = Object.keys(object)
     .filter((key) => key.toLowerCase().includes(filterKey.toLowerCase()))
@@ -61,3 +65,11 @@ export const generateChampionBuildLinks = (championID) => {
     'blitz.gg': generateBlitzggLink(championID)
   };
 };
+
+export const getChampionAbilitiesVideosURLS = (championKey) => {
+  const championAbilitiesVideosURLS = {};
+  championsAbilitiesKeys.forEach((ability) => {
+    championAbilitiesVideosURLS[ability] = getChampionAbilityVideoURL(championKey, ability);
+  });
+  return championAbilitiesVideosURLS;
+}

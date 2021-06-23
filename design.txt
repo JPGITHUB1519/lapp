@@ -99,5 +99,9 @@ Backlog:
   Limits:
     Champions By role (top, mid, jungle, bottom, support)
       the api does not give this data and it's hard to maintain that for them between patch
+    
+    there is inconsistency on the champions abilities names  for example:
+      1. <champion_name>q  <champion_name>w  <champion_name>e  <champion_name>r
+      2. VladimirQ, VladimirSanguine, Pool, VladimirE, VladimirHemoplague
 
 

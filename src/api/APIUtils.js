@@ -10,6 +10,9 @@ export const DATADRAGON_VERSIONED_IMAGES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERS
 // not versioned images
 export const DATADRAGON_IMAGES_URL = `${DATADRAGON_CDN_URL}/img`; 
 
+// champions abilities cdn
+// https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0008/ability_0008_Q1.webm
+const CHAMPION_ABILITIES_VIDEOS_CDN = 'https://d28xe8vt774jo5.cloudfront.net/champion-abilities';
 
 export const getAvailableLanguages = async () => {
   const result = await axios(`${DATADRAGON_CDN_URL}/languages.json`);
@@ -51,4 +54,13 @@ export const getChampionById = async (championID) => {
   const data = result.data.data;
 
   return data;
+};
+
+export const getChampionAbilityVideoURL = (championKey, ability) => {
+  const championIdentifier = championKey.padStart(4, '0');
+  const videoFormat = '.webm';
+  const url = `${CHAMPION_ABILITIES_VIDEOS_CDN}/${championIdentifier}/ability_${championIdentifier}_${ability}1${videoFormat}`;
+  
+  return url;
+  //https://d28xe8vt774jo5.cloudfront.net/champion-abilities/00${champion.id}/ability_00
 };

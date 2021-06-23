@@ -5,7 +5,9 @@ import Cliploader from "react-spinners/ClipLoader";
 import * as APIUtils from '../api/APIUtils';
 import ChampionAvatar from './ChampionAvatar';
 import ChampionBuildLinks from './ChampionBuildLinks';
-import { DATADRAGON_VERSIONED_IMAGES_URL, DATADRAGON_IMAGES_URL } from '../api/APIUtils';
+import { DATADRAGON_VERSIONED_IMAGES_URL, DATADRAGON_IMAGES_URL, getChampionAbilityVideoURL } from '../api/APIUtils';
+import { championsAbilitiesKeys } from '../config';
+import * as Utils from '../Utils';
 
 function ChampionInfo(props) {
   const [championData, setChampionData] = useState([]);
@@ -31,7 +33,13 @@ function ChampionInfo(props) {
     fetchData();
   }, []);
 
-  
+  // if (Object.keys(championData).length > 0) {
+  //   const abilitiesVideosUrl = Utils.getChampionAbilitiesVideosURLS(championData.key)
+  //   console.log(abilitiesVideosUrl);
+  // }
+
+  //console.log(getChampionAbilityVideoURL(championData.key, 'Q'));
+
 
   return (
     <div className="champion-info">
