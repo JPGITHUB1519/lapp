@@ -8,7 +8,7 @@ import {
 
 import Home from './Home';
 import ChampionsPage from './ChampionsPage';
-import ChampionInfo from './ChampionInfo';
+import ChampionInfo from './champion-info/ChampionInfo';
 import ChampionsList from './ChampionsList';
 import ChampionListItem from './ChampionListItem';
 import ChampionsFilters from './ChampionsFilters';
