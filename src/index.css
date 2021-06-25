@@ -78,6 +78,7 @@ body {
 
 .champion-info {
   margin-top: 20px;
+  padding: 0px 15px;
 }
 
 .champion-build-links {
@@ -89,9 +90,47 @@ body {
   text-decoration: none;
 }
 
+.champion-abilities-info {
+  padding: 50px 0px;
+}
+
+.champion-abilities-info__menu {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.champion-abilities-info__description {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.champion-abilities-info__ability-type {
+  color: rgb(126, 126, 126);
+  font-size: 12px;
+}
+
+.champion-abilities-info_ability-name {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.champion-abilities-info__ability-description {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+
 .responsive-image {
   max-width: 100%;
   height: auto;
+}
+
+.selected {
+  border: 2px solid rgb(208, 168, 92) !important;
 }
 
 .full-screen-loader-container {

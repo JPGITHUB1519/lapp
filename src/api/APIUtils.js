@@ -6,7 +6,7 @@ const LANGUAGE = 'en_US';
 const DATADRAGON_CDN_URL = 'https://ddragon.leagueoflegends.com/cdn';
 const DATADRAGON_API_URL = 'https://ddragon.leagueoflegends.com/api';
 const DATADRAGON_DATA_FILES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERSION}/data/${LANGUAGE}`;
-export const DATADRAGON_VERSIONED_IMAGES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERSION}\\img`;
+export const DATADRAGON_VERSIONED_IMAGES_URL = `${DATADRAGON_CDN_URL}/${LOL_VERSION}/img`;
 // not versioned images
 export const DATADRAGON_IMAGES_URL = `${DATADRAGON_CDN_URL}/img`; 
 
