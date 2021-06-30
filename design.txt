@@ -69,9 +69,10 @@ Backlog:
     - when the name is too long (for example Nunu and Willump) only 2 columns is shown on mobile
 
   Doing:
-    - Dynamic Abilities info component
     - Implementing champion info page
   Done:
+    - Champions skins image gallery
+    - Dynamic Abilities info component
     - divide champions info page in smaller components
     - Making Avatar responsive
     - Implement champions builds links component
