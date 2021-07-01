@@ -131,6 +131,20 @@ body {
   margin-top: 20px;
 }
 
+.champions-skins-gallery__carousel-thumbnail {
+  cursor: pointer;
+}
+
+.champions-skins-gallery__carousel-thumbnail .image-gallery-thumbnail-label {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1px;
+}
+
+
+.thumbnail-label {
+  background-color: red;
+}
+
 .full-width-image {
   width: 100%;
 }
@@ -157,11 +171,11 @@ body {
   margin-top: 25px;
 }
 
-.carousel-caption-text {
+/* .carousel-caption-text {
   font-size: 16px;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
-}
+} */
 
 /* 
 ==========================================================================

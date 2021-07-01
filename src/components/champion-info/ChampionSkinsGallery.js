@@ -1,46 +1,28 @@
 import PropTypes, { object } from 'prop-types';
-import Carousel from 'react-bootstrap/Carousel';
+import ImageGallery from 'react-image-gallery';
 import ChampionAvatar from '../ChampionAvatar';
 import { DATADRAGON_VERSIONED_IMAGES_URL, DATADRAGON_IMAGES_URL} from '../../api/APIUtils';
 
 function ChampionSkinsGallery(props) {
   const { championData } = props;
 
+  const images = championData.skins.map(skin => {
+    return {
+      original: `${DATADRAGON_IMAGES_URL}\\${championData.image.group}\\splash\\${championData.id}_${skin.num}.jpg`,
+      thumbnail: `${DATADRAGON_IMAGES_URL}\\${championData.image.group}\\splash\\${championData.id}_${skin.num}.jpg`,
+      description: skin.name,
+      // thumbnailTitle: skin.name,
+      // thumbnailLabel: skin.name,
+      thumbnailClass: 'champions-skins-gallery__carousel-thumbnail',
+     
+    }
+  });
   return (
     <div className="champion-skins-gallery">
       <h2 className="champions-skins-gallery__title">Available Skins ({championData.skins.length}):</h2>
       <div className="champions-skins-gallery__carousel-container">
-        <Carousel interval={null}>
-          {championData.skins.map(skin => {
-            return (
-              <Carousel.Item>
-                <img 
-                  className='full-width-image'
-                  src={`${DATADRAGON_IMAGES_URL}\\${championData.image.group}\\splash\\${championData.id}_${skin.num}.jpg`} 
-                  alt={skin.name}
-                />
-                <Carousel.Caption>
-                  <h3 className="carousel-caption-text">{skin.name}</h3>
-                </Carousel.Caption>
-              </Carousel.Item>
-            );
-          })}
-        </Carousel>
+        <ImageGallery items={images} showIndex={true} />
       </div>
-      
-        {/* {championData.skins.map(skin => {
-          return (
-            <>
-              <p>{skin.name}</p>
-              <ChampionAvatar 
-                image={`${DATADRAGON_IMAGES_URL}\\${championData.image.group}\\splash\\${championData.id}_${skin.num}.jpg`} 
-                alt={skin.name}
-                width={500}
-                height={300}
-              />
-            </>
-          );
-        })}   */}
     </div>
   );
 }
