@@ -21,7 +21,8 @@ function Video({ url, className }) {
   }, [url]);
 
   return (
-    <video ref={videoRef} className={className} controls autoPlay>
+    // it needs to be mute because chrome / safari only accepts autoplay on muted videos
+    <video ref={videoRef} className={className} controls autoPlay muted>
       <source src={url} />
       Sorry but your browser does not support HTML5 Video.
     </video>
