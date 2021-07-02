@@ -59,6 +59,7 @@ Color:
 Backlog:
 
   To do:
+    - If Video does not exist show a message (for example vladimir passive)
     - Support Multiple Languages By URL -> use React.Context for this
     - Implement Dark Mode -> use React.Context for this
     - Create global component for full screen loader
@@ -71,6 +72,7 @@ Backlog:
   Doing:
     - Implementing champion info page
   Done:
+    - Add videos for the champions habilities
     - Champions skins image gallery
     - Dynamic Abilities info component
     - divide champions info page in smaller components

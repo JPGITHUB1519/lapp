@@ -60,7 +60,6 @@ export const getChampionAbilityVideoURL = (championKey, ability) => {
   const championIdentifier = championKey.padStart(4, '0');
   const videoFormat = '.webm';
   const url = `${CHAMPION_ABILITIES_VIDEOS_CDN}/${championIdentifier}/ability_${championIdentifier}_${ability}1${videoFormat}`;
-  
   return url;
   //https://d28xe8vt774jo5.cloudfront.net/champion-abilities/00${champion.id}/ability_00
 };

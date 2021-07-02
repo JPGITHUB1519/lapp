@@ -68,8 +68,10 @@ export const generateChampionBuildLinks = (championID) => {
 
 export const getChampionAbilitiesVideosURLS = (championKey) => {
   const championAbilitiesVideosURLS = {};
-  championsAbilitiesKeys.forEach((ability) => {
+  // destructuring to include champions passive too
+  ['P', ...championsAbilitiesKeys].forEach((ability) => {
     championAbilitiesVideosURLS[ability] = getChampionAbilityVideoURL(championKey, ability);
   });
+
   return championAbilitiesVideosURLS;
 }
