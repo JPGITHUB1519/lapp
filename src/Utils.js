@@ -1,4 +1,4 @@
-import { championsAbilitiesKeys } from './config';
+import { championsAbilitiesKeys, championsRoles } from './config';
 import { getChampionAbilityVideoURL } from './api/APIUtils';
 
 
@@ -30,6 +30,21 @@ export const filterChampionsByTag = (champions, tag) => {
 
   return filteredData;
 };
+
+
+export const getRoleDataByName = (roleName) => {
+  let roleData = championsRoles.filter(role => {
+    return role.name === roleName;
+  });
+
+  if (roleData && roleData.length) {
+    roleData = roleData[0];
+  } else {
+    roleData = {};
+  }
+
+  return roleData;
+}
 
 // sleep utility function, you can await it!
 export const sleep = (ms) => {

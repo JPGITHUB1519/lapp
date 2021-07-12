@@ -9,7 +9,7 @@ function ChampionsSearcher(props)
   return (
     <div className="champions-searcher">
       <ChampionsFilters 
-        filters={['All', ...Config.championsTags]} 
+        filters={['All', ...Config.championsRoles.map(role => role.name)]} 
         selectedTagFilter={props.selectedTagFilter}
         onFilterClick={props.onFilterClick} 
       />
