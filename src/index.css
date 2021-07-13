@@ -206,6 +206,32 @@ body {
   padding: 5px;
   fill: rgb(208, 168, 92);
 }
+
+
+.difficulty-bar {
+  display: flex;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+}
+
+.difficulty-bar__fill {
+  border-right: 1px solid #051e3e;
+  height: 25px;
+  width: 10%;
+}
+
+.difficulty-bar__fill:last-of-type {
+  border: none;
+}
+
+.difficulty-bar__fill--brown {
+  background-color: rgba(194, 144, 45, 0.7);
+}
+
+.difficulty-bar__fill--gray {
+  background-color: #9E9E9e;
+}
+
 /* .carousel-caption-text {
   font-size: 16px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -248,6 +274,11 @@ Responsive Media Queries
 
   .champion-ability-video {
     width: 50%;
+  }
+
+  .difficulty-bar {
+    width: 71%;
+    margin: 15px auto 0 auto;
   }
 }
 

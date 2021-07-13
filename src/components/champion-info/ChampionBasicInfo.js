@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import ChampionAvatar from '../ChampionAvatar';
 import ChampionBuildLinks from '../ChampionBuildLinks';
 import { DATADRAGON_VERSIONED_IMAGES_URL, DATADRAGON_IMAGES_URL } from '../../api/APIUtils';
+import DifficultyBar from './DifficultyBar';
 import RoleSVG from '../svgs/RoleSVG';
 
 function ChampionBasicInfo(props) {
@@ -20,7 +21,8 @@ function ChampionBasicInfo(props) {
         <p className="champion-basic-info__champion-lore">{championData.lore} </p><br />
         {/* championData is not available on first render so we have to short circuit! */}
         <p><RoleSVG role={championData.tags[0]} /> Role: {championData.tags ? championData.tags[0] : ''}</p><br />
-        <p>Difficulty: {championData.info ? championData.info.difficulty : ''}</p><br />
+        <p>Difficulty: ({championData.info.difficulty}/10)</p>
+        <DifficultyBar level={championData.info.difficulty} />
       </div>
     </div>
   )
