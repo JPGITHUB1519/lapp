@@ -14,15 +14,20 @@ function ChampionBasicInfo(props) {
         image={`${DATADRAGON_IMAGES_URL}\\${championData.image.group}\\splash\\${championData.id}_0.jpg`}
         alt={championData.name}
       />
-      <ChampionBuildLinks championID={championData.id} />
       <div className="champion-basic-info__info">
         <h2 className="champion-basic-info__champion-title">{championData.title}</h2>
         <h2 className="champion-basic-info__champion-name">{championData.name}</h2>
-        <p className="champion-basic-info__champion-lore">{championData.lore} </p><br />
+        <p className="champion-basic-info__champion-lore">{championData.lore} </p>
         {/* championData is not available on first render so we have to short circuit! */}
-        <p><RoleSVG role={championData.tags[0]} /> Role: {championData.tags ? championData.tags[0] : ''}</p><br />
-        <p>Difficulty: ({championData.info.difficulty}/10)</p>
-        <DifficultyBar level={championData.info.difficulty} />
+        <div className="champion-basic-info__champion-role">
+          <RoleSVG role={championData.tags[0]} /> Role: {championData.tags ? championData.tags[0] : ''}
+        </div>
+        <div className="champion-basic-info__difficulty">          
+          <p>Difficulty: ({championData.info.difficulty}/10)</p>
+          <DifficultyBar level={championData.info.difficulty} />
+          <ChampionBuildLinks championID={championData.id} />
+        </div>
+
       </div>
     </div>
   )

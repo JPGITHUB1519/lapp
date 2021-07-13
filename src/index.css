@@ -83,6 +83,7 @@ body {
 
 .champion-build-links {
   display: flex;
+  margin-top: 20px;
   justify-content: space-around;
 }
 
@@ -95,7 +96,10 @@ body {
 }
 
 .champion-basic-info__info {
-  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px auto 0 auto;
   text-align: center;
 }
 
@@ -104,6 +108,7 @@ body {
 }
 
 .champion-basic-info__champion-title {
+  width: 100%;
   font-size: 30px;
 }
 
@@ -112,6 +117,19 @@ body {
   margin: 25px auto 0 auto;
   text-align: justify;
   width: 100%;
+}
+
+.champion-basic-info__champion-role {
+  margin-top: 15px;
+}
+
+.champion-basic-info__difficulty {
+  margin-top: 25px;
+  width: 99%;
+}
+
+.champion-basic-info__difficulty .difficulty-bar {
+  margin-top: 25px;
 }
 
 .champion-abilities-info {
@@ -211,7 +229,7 @@ body {
 .difficulty-bar {
   display: flex;
   border: 1px solid #ccc;
-  margin-top: 15px;
+  width: 100%;
 }
 
 .difficulty-bar__fill {
@@ -266,19 +284,21 @@ Responsive Media Queries
     font-size: 25px;
   }
 
+  .champion-basic-info__info {
+    width: 70%;
+  }
+
   .champion-basic-info__champion-lore {
     line-height: 35px;
     text-align: center;
-    width: 70%;
   }
 
   .champion-ability-video {
     width: 50%;
   }
-
-  .difficulty-bar {
-    width: 71%;
-    margin: 15px auto 0 auto;
+  
+  .champion-build-links {
+    width: 100%;
   }
 }
 
