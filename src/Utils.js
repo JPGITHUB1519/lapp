@@ -90,3 +90,9 @@ export const getChampionAbilitiesVideosURLS = (championKey) => {
 
   return championAbilitiesVideosURLS;
 }
+
+
+export const capitalize = (string) => {
+  const lower = string.toLowerCase();
+  return string.charAt(0).toUpperCase() + lower.slice(1);
+};

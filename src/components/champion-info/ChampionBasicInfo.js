@@ -4,6 +4,7 @@ import ChampionBuildLinks from '../ChampionBuildLinks';
 import { DATADRAGON_VERSIONED_IMAGES_URL, DATADRAGON_IMAGES_URL } from '../../api/APIUtils';
 import DifficultyBar from './DifficultyBar';
 import RoleSVG from '../svgs/RoleSVG';
+import * as Utils from '../../Utils';
 
 function ChampionBasicInfo(props) {
   const { championData } = props;
@@ -15,7 +16,7 @@ function ChampionBasicInfo(props) {
         alt={championData.name}
       />
       <div className="champion-basic-info__info">
-        <h2 className="champion-basic-info__champion-title">{championData.title}</h2>
+        <h2 className="champion-basic-info__champion-title">{Utils.capitalize(championData.title)}</h2>
         <h2 className="champion-basic-info__champion-name">{championData.name}</h2>
         <p className="champion-basic-info__champion-lore">{championData.lore} </p>
         {/* championData is not available on first render so we have to short circuit! */}
